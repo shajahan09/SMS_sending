@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<p th:text="${msg}"></p>
+
+	<section>
+		<div>
+			<form th:action="@{/allsmsdata}">
+				<table border="1">
+					<tr>
+						<th>ID</th>
+						<th>Mobile</th>
+						<th>SMS Content</th>
+					</tr>
+					<tr th:each="dt : ${message}">
+						<td th:text="${dt.sms_id}"></td>
+						<td th:text="${dt.recepient_mobile}"></td>
+						<td th:text="${dt.content}"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+	</section>
+
+</body>
+</html>
