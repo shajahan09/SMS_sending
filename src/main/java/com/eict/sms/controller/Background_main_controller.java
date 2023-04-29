@@ -57,11 +57,11 @@ public class Background_main_controller {
 					String sms_response = jsonNode.get("data").get(0).get("error").asText();
 					
 					if(sms_response.equals("0")) {
-						// call success == 0
+						// call success == 1
 						update_success_sms(String.valueOf(data.get(i).getSms_id()),1, main_api, response_data);
 						main_api = null;
 					}else {
-						// call error/failed == 1
+						// call error/failed == 0
 						update_success_sms(String.valueOf(data.get(i).getSms_id()), 0, main_api, response_data);
 						main_api = null;
 					}

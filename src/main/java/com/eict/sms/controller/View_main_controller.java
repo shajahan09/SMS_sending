@@ -46,7 +46,7 @@ public class View_main_controller {
 			String sms_response = jsonNode.get("data").get(0).get("error").asText();
 			System.out.println("------------++++ sms api+++------------"+main_api);
 			
-			if(sms_response.equals("0")) { // success =0; and error =1
+			if(sms_response.equals("0")) { // success =0; and error =1 but db send reverse.
 				update_success_sms(data.getSms_id(),1,main_api,response);	
 			}else {
 				update_success_sms(data.getSms_id(), 0, main_api, response);	
