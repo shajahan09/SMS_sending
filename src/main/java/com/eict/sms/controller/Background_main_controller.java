@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+
 import com.eict.sms.entity.SMS_data_entity;
 import com.eict.sms.service.SMS_data_service;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,7 +21,7 @@ public class Background_main_controller {
 	private int count = 0;
 	
 	private String ending = "&msg=";
-	private final String API_URL = "https://sms.prodata.com.bd/index.php?app=ws&u=uniaid&h=b5571641cc2fe72ab41de589fd02e8c5&op=pv&to=88";
+	private final String API_URL = "https://sms.prodata.com.bd/index.php?app=ws&u=uniaid&h=6a4e2030b075e64796dab7ff31f54ace&op=pv&to=88";
 	private RestTemplate restTemplate = new RestTemplate();
 	private String response_data = null;
 	private String main_api = null;

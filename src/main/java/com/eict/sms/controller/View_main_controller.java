@@ -19,9 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class View_main_controller {
 	@Autowired
 	SMS_data_service sms_service;
-	@Autowired
-	SMS_data_service sms_data_service;
-
+	
 	@RequestMapping("/")
 	public String smspage() {
 
@@ -80,7 +78,7 @@ public class View_main_controller {
 	
 	
 	public void update_success_sms(String smsId,int sms_flag,String request_api,String response_api) {
-	    sms_data_service.update_smsLog_success(smsId,sms_flag, request_api, response_api);
+		sms_service.update_smsLog_success(smsId,sms_flag, request_api, response_api);
 	
 	}
 
